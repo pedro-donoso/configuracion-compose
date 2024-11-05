@@ -1,4 +1,4 @@
-﻿# configuracion-compose
+﻿# Configuracion-compose
 
  ### 1. Habilito viewbinding y databinding:
 
