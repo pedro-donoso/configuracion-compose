@@ -32,3 +32,6 @@ creo directory -> layout -> layout resource file -> activity_main
 
 ![main](https://github.com/user-attachments/assets/f603eb90-219c-4841-b3d0-4e7df6f6b1c5)
 
+### 8. Cambiar nombre proyecto en settings.gradle.kts:
+
+![root](https://github.com/user-attachments/assets/db3c2eb8-533f-4385-916d-f4049f822dc6)
