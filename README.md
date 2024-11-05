@@ -1,92 +1,34 @@
-﻿# Configuracion-compose
+![COMPOSE](https://github.com/user-attachments/assets/da0cbaba-6b28-4631-82b1-542482be2e85)
 
- ### 1. Habilito viewbinding y databinding:
+ ### 1. Habilito viewbinding y databinding 
+ #### En build.gradle.kts (Module :app)
 
- ```
- buildFeatures {
-        compose = true
-        viewBinding = true
-    }
-    
-    dataBinding {
-        enable = true
-    }
-```
+![BUILD](https://github.com/user-attachments/assets/6ef5e43d-b07a-431e-802d-b377f35e88d6)
 
 ### 2. Agrego dependencias (Reemplazar por versión actual y Sincronizar):
-```
-val nav_version = "2.7.7"
-    // Navigation
-    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
-    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
-```
+
+![DEPENDENCIES](https://github.com/user-attachments/assets/cdac75b8-2086-4c4f-8bf3-af87cad22d49)
 
 ### 3. Configuro activity_main:
 
 en res 
 creo directory -> layout -> layout resource file -> activity_main
 
-```
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    >
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-```
+![ACTIVITY](https://github.com/user-attachments/assets/4cb063c0-1834-4267-a609-b12862f5b038)
 
 ### 4. Configuro themes (res -> values -> themes.xml):
 
-```
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <style name="Theme.Estado" parent="Theme.AppCompat.DayNight.DarkActionBar" />
-</resources>
-```
+![THEMES](https://github.com/user-attachments/assets/e1bccc88-faf6-4b23-98f2-2fc8f718a540)
 
 ### 5. Configuro Manifest:
 
-```
-<activity
-    android:name=".MainActivity"
-    android:exported="true"
-    android:label="@string/app_name"
-    android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-       <intent-filter>
-          <action android:name="android.intent.action.MAIN" />
-             <category android:name="android.intent.category.LAUNCHER" />
-       </intent-filter>
-</activity>
-```
+![ACT](https://github.com/user-attachments/assets/63509a2f-4c4b-4a30-b553-29a9b14db376)
 
 ### 6. Agrego Permiso Internet en Manifest:
 
-```
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+![INTER](https://github.com/user-attachments/assets/04f94916-6915-4c33-85bb-06d2538d64c4)
 
-    <uses-permission android:name="android.permission.INTERNET" />
+### 7. Cambio AppCompatActivity() y Título App en MainActivity:
 
-    <application
-```
+![main](https://github.com/user-attachments/assets/f603eb90-219c-4841-b3d0-4e7df6f6b1c5)
 
-### 7. Cambio AppCompatActivity() en MainActivity:
-
-```
-class MainActivity : AppCompatActivity() {...
-```
-
-### 8. Cambio título App en MainActivity:
-```
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-
-        supportActionBar?.title = "Mi App"
-```
